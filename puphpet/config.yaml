@@ -248,9 +248,10 @@ nodejs:
     npm_packages:
         - express
         - mime
-        - jsdom@3.1.2
-        - jquery
+        - jsdom@3
+        - jquery@>=2.1
         - http
+        - uri
 hhvm:
     install: '0'
     nightly: 0
