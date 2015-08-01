@@ -252,6 +252,7 @@ nodejs:
         - jquery@>=2.1
         - http
         - uri
+        - queue
 hhvm:
     install: '0'
     nightly: 0
