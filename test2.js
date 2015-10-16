@@ -1,13 +1,25 @@
+require('classes/Queue.js');
+
 var http = require('http');
-var env = require("jsdom").env; 
+var env = require('jsdom').env; 
+
+var PARSE_URL = 'fjorgedigital.com';
+
 // var $ = require('jquery')(window);
 var html = '';
+
+//list of URL's that are yet to be parsed
+var urlQueue = new Queue();
+urlQueue.enqueue('fjorgedigital.com');
+
+// list of URLs that have previously been parsed
+var parsedUrlList = [];
 
 var options = {
   host: 'fjorgedigital.com',
   port: 80,
   path: '/',
-  method: 'POST'
+  method: 'GET'
 };
 
 var req = http.request(options, function(res) {
